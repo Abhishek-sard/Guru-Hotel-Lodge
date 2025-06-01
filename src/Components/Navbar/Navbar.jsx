@@ -32,7 +32,7 @@ const Navbar = () => {
 
         {/* Facebook Icon */}
         <div className="social-icon">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.facebook.com/guruhotelandlodge" target="_blank" rel="noopener noreferrer">
             <FaFacebook className="facebook-icon" />
           </a>
         </div>

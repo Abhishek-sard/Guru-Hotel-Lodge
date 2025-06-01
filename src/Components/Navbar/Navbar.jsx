@@ -1,23 +1,42 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './Navbar.css'; // We'll create this file for styling
-import logo from '../../assets/logo2.jpg'; // Update path as needed
+import React, { useState } from "react";
+import "./Navbar.css";
+
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
         {/* Logo */}
-        <Link to="/" className="navbar-logo">
-          <img src={logo} alt="Logo" className="logo-img" />
-        </Link>
+        <div className="navbar-logo">
+          <span>Logo</span>
+        </div>
+
+        {/* Hamburger menu for mobile */}
+        <div 
+          className={`hamburger ${isOpen ? "open" : ""}`} 
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
 
         {/* Navigation Links */}
-        <ul className="nav-menu">
-          <li><Link to="/" className="nav-link">Home</Link></li>
-          <li><Link to="/about" className="nav-link">About</Link></li>
-          <li><Link to="/services" className="nav-link">Services</Link></li>
-          <li><Link to="/contact" className="nav-link">Contact</Link></li>
+        <ul className={`nav-menu ${isOpen ? "active" : ""}`}>
+          <li className="nav-item">
+            <a href="/" className="nav-link">Home</a>
+          </li>
+          <li className="nav-item">
+            <a href="/about" className="nav-link">About</a>
+          </li>
+          <li className="nav-item">
+            <a href="/services" className="nav-link">Services</a>
+          </li>
+          <li className="nav-item">
+            <a href="/contact" className="nav-link">Contact</a>
+          </li>
         </ul>
       </div>
     </nav>

@@ -43,10 +43,10 @@
   transform: translateX(-50%);
 }
 
+/* ... rest of your existing CSS ... */
 
 .nav-item .nav-link {
   color: white;
-  font-size: large;
   text-decoration: none;
   padding: 0.5rem 1rem;
   transition: color 0.3s;
@@ -63,7 +63,7 @@
 
 .facebook-icon {
   color: white;
-  font-size: 2.2rem;
+  font-size: 1.5rem;
   transition: color 0.3s;
 }
 

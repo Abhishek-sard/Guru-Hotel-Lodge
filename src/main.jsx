@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import Navbar from './Components/Navbar/Navbar'
 import Body from './Components/Body/Body'
 import BookingForm from './Components/BookingForm/BookingForm'
+import ImageHolder from './Components/ImageHolder/ImageHolder'
 
 
 
@@ -11,5 +12,6 @@ createRoot(document.getElementById('root')).render(
     <Navbar/>
     <Body/>
     <BookingForm/>
+    <ImageHolder/>
   </StrictMode>,
 )

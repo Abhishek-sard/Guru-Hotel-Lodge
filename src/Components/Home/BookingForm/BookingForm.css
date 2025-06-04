@@ -1,7 +1,8 @@
 /* BookingForm.css */
 .booking-container {
   background-color: #f5f7fa;
-  color: #2f3d4a;
+  color: #0084ff;
+  text-align: center;
   padding: 2rem 1rem;
   margin-top: 80px; /* Account for fixed navbar */
   min-height: calc(100vh - 80px);

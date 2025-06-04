@@ -1,27 +1,43 @@
 import React from 'react';
-import './ImageHolder.css'; // We'll create this CSS file
+import './ImageHolder.css';
+
+// Import your images (adjust the paths according to your project structure)
+import image1 from '../../../assets/bed1.jpg';
+import image2 from '../../../assets/bed2.jpg';
+import image3 from '../../../assets/bed3.jpg';
+import image4 from '../../../assets/bed4.jpg';
+import image5 from '../../../assets/bed5.jpg';
+import image6 from '../../../assets/bed6.jpg';
+import image7 from '../../../assets/bed7.jpg';
+import image8 from '../../../assets/bed8.jpg';
+import image9 from '../../../assets/bed9.jpg';
 
 const ImageHolder = () => {
-  // Sample data for the grid
+  // Grid data with actual image imports
   const gridData = [
-    { id: 1, title: 'Mountain View', text: 'Enjoy Himalayan scenery' },
-    { id: 2, title: 'Luxury Rooms', text: 'Premium accommodations' },
-    { id: 3, title: 'Spa Services', text: 'Relax and rejuvenate' },
-    { id: 4, title: 'Local Cuisine', text: 'Authentic Nepali food' },
-    { id: 5, title: 'Adventure Tours', text: 'Explore Nepal' },
-    { id: 6, title: 'Cultural Shows', text: 'Traditional performances' },
-    { id: 7, title: 'Swimming Pool', text: 'Refresh yourself' },
-    { id: 8, title: 'Yoga Classes', text: 'Find your balance' },
-    { id: 9, title: 'City Center', text: 'Easy access to attractions' }
+    { id: 1, title: 'Bed 1', text: 'Enjoy Himalayan scenery', image: image1 },
+    { id: 2, title: 'Bed 2', text: 'Premium accommodations', image: image2 },
+    { id: 3, title: 'Bed 3', text: 'Relax and rejuvenate', image: image3 },
+    { id: 4, title: 'Bed 4', text: 'Authentic Nepali food', image: image4 },
+    { id: 5, title: 'Bed 5', text: 'Explore Nepal', image: image5 },
+    { id: 6, title: 'Bed 6', text: 'Traditional performances', image: image6 },
+    { id: 7, title: 'Bed 7', text: 'Refresh yourself', image: image7 },
+    { id: 8, title: 'Bed 8', text: 'Find your balance', image: image8 },
+    { id: 9, title: 'Bed 9', text: 'Easy access to attractions', image: image9 }
   ];
 
   return (
     <div className="grid-container">
-      <h2>Our Hotel Features</h2>
+      <h2>Our Hotel Rooms</h2>
       <div className="image-grid">
         {gridData.map((item) => (
           <div className="grid-item" key={item.id}>
-            <div className="image-placeholder"></div> {/* This acts as our image */}
+            <img 
+              src={item.image} 
+              alt={item.title} 
+              className="grid-image"
+              loading="lazy" // For better performance
+            />
             <div className="text-overlay">
               <h3>{item.title}</h3>
               <p>{item.text}</p>

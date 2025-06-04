@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaFacebook } from 'react-icons/fa';
+import Logo from '../../../assets/LOGO1.png'
 import './Navbar.css';
 
 const Navbar = () => {
@@ -16,7 +17,7 @@ const Navbar = () => {
       <div className="navbar-container">
         <div className="navbar-logo">
           <Link to="/">
-            <img src="/logo.png" alt="Logo" className="logo-img" />
+            <img src={Logo} alt="Logo" className="logo-img" />
           </Link>
         </div>
 
@@ -50,7 +51,7 @@ const Navbar = () => {
         </ul>
 
         <div className="social-icon">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.facebook.com/guruhotelandlodge" target="_blank" rel="noopener noreferrer">
             <FaFacebook className="facebook-icon" />
           </a>
         </div>

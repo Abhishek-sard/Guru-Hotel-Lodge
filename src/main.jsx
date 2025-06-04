@@ -8,6 +8,7 @@ import BookingForm from './Components/Home/BookingForm/BookingForm';
 import ImageHolder from './Components/Home/ImageHolder/ImageHolder';
 import Footer from './Components/Home/Footer/Footer';
 import About from './Components/About/About';
+import Services from './Components/Services/Services';
 
 // Create a Layout component that includes the Navbar and Footer
 const Layout = ({ children }) => (
@@ -20,7 +21,7 @@ const Layout = ({ children }) => (
   </>
 );
 
-// Update your page components to work with the Layout
+// Page components
 const Home = () => (
   <>
     <Body />
@@ -29,9 +30,9 @@ const Home = () => (
   </>
 );
 
-const AboutPage = () => (
-  <About />
-);
+const AboutPage = () => <About />;
+
+const ServicesPage = () => <Services />;
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -39,6 +40,7 @@ createRoot(document.getElementById('root')).render(
       <Routes>
         <Route path="/" element={<Layout><Home /></Layout>} />
         <Route path="/about" element={<Layout><AboutPage /></Layout>} />
+        <Route path="/services" element={<Layout><ServicesPage /></Layout>} />
       </Routes>
     </BrowserRouter>
   </StrictMode>

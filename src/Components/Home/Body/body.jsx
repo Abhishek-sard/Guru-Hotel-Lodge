@@ -1,7 +1,6 @@
 import React from "react";
 import "./body.css";
-import Building from "../../assets/building-photo.png";
-
+import Building from '../../../assets/building-photo.png'
 const Body = () => {
   return (
     <div className="body-app">

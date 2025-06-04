@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-import Logo from "../../assets/LOGO1.png";
+import Logo from '../../../assets/LOGO1.png'
 import { FaFacebook } from "react-icons/fa"; // Using react-icons for Facebook logo
 
 const Navbar = () => {

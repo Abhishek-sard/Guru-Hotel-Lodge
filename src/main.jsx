@@ -9,6 +9,7 @@ import ImageHolder from './Components/Home/ImageHolder/ImageHolder';
 import Footer from './Components/Home/Footer/Footer';
 import About from './Components/About/About';
 import Services from './Components/Services/Services';
+import Contact from './Components/Contact/Contact';
 
 // Create a Layout component that includes the Navbar and Footer
 const Layout = ({ children }) => (
@@ -34,6 +35,8 @@ const AboutPage = () => <About />;
 
 const ServicesPage = () => <Services />;
 
+const ContactPage = () => <Contact/>;
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
@@ -41,6 +44,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/" element={<Layout><Home /></Layout>} />
         <Route path="/about" element={<Layout><AboutPage /></Layout>} />
         <Route path="/services" element={<Layout><ServicesPage /></Layout>} />
+        <Route path="/Contact" element={<Layout><ContactPage/></Layout>}/>
       </Routes>
     </BrowserRouter>
   </StrictMode>

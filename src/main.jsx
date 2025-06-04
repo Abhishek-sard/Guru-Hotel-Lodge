@@ -4,6 +4,7 @@ import Navbar from './Components/Navbar/Navbar'
 import Body from './Components/Body/Body'
 import BookingForm from './Components/BookingForm/BookingForm'
 import ImageHolder from './Components/ImageHolder/ImageHolder'
+import Footer from './Components/Footer/Footer'
 
 
 
@@ -13,5 +14,6 @@ createRoot(document.getElementById('root')).render(
     <Body/>
     <BookingForm/>
     <ImageHolder/>
+    <Footer/>
   </StrictMode>,
 )

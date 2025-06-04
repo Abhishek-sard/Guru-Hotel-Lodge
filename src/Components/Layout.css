@@ -1,0 +1,15 @@
+/* Add this to your global CSS file */
+.main-content {
+  padding-top: 80px; /* Adjust this value based on your navbar height */
+  min-height: calc(100vh - [footer-height]); /* Adjust footer height as needed */
+}
+
+/* Ensure your Navbar.css has these properties */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  /* rest of your navbar styles */
+}

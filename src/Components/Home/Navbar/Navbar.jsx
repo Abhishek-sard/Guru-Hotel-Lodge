@@ -1,50 +1,58 @@
-import React, { useState } from "react";
-import "./Navbar.css";
-import Logo from '../../../assets/LOGO1.png'
-import { FaFacebook } from "react-icons/fa"; // Using react-icons for Facebook logo
+// Navbar.jsx
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { FaFacebook } from 'react-icons/fa';
+import './Navbar.css';
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        {/* Logo */}
         <div className="navbar-logo">
-          <img src={Logo} alt="Company Logo" className="logo-img" />
+          <Link to="/">
+            <img src="/logo.png" alt="Logo" className="logo-img" />
+          </Link>
         </div>
 
-        {/* Navigation Links - Centered */}
-        <ul className={`nav-menu ${isOpen ? "active" : ""}`}>
+        <div className="hamburger" onClick={toggleMenu}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
           <li className="nav-item">
-            <a href="/" className="nav-link">Home</a>
+            <Link to="/" className="nav-link" onClick={() => setIsMenuOpen(false)}>
+              Home
+            </Link>
           </li>
           <li className="nav-item">
-            <a href="/about" className="nav-link">About</a>
+            <Link to="/about" className="nav-link" onClick={() => setIsMenuOpen(false)}>
+              About
+            </Link>
           </li>
           <li className="nav-item">
-            <a href="/services" className="nav-link">Services</a>
+            <Link to="/services" className="nav-link" onClick={() => setIsMenuOpen(false)}>
+              Services
+            </Link>
           </li>
           <li className="nav-item">
-            <a href="/contact" className="nav-link">Contact</a>
+            <Link to="/contact" className="nav-link" onClick={() => setIsMenuOpen(false)}>
+              Contact
+            </Link>
           </li>
         </ul>
 
-        {/* Facebook Icon */}
         <div className="social-icon">
-          <a href="https://www.facebook.com/guruhotelandlodge" target="_blank" rel="noopener noreferrer">
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
             <FaFacebook className="facebook-icon" />
           </a>
-        </div>
-
-        {/* Hamburger menu for mobile */}
-        <div 
-          className={`hamburger ${isOpen ? "open" : ""}`} 
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
         </div>
       </div>
     </nav>

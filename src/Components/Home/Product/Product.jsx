@@ -31,7 +31,11 @@ const Product = () => {
     ]
   return (
     <div className = "grid-container">
-        
+        {gridData.map((item) => (
+            <div key={item.id} className="grid-item">
+                <img src={item.image} alt="product" />
+        }
+
       
     </div>
   )
